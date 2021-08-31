@@ -1,8 +1,9 @@
+import * as Types from '../types';
 import testnet from '../environments/testnet';
 
 
 
-const getProtocolEssentials = (protocols: Protocols[], protocolName?: string) => {
+const getProtocolEssentials = (protocols: Types.Protocols[], protocolName?: string) => {
 
     let addresses;
     let name;
@@ -35,7 +36,7 @@ const getProtocolEssentials = (protocols: Protocols[], protocolName?: string) =>
 }
 
 
-const protocolSelector = (options: Options) => {
+const protocolSelector = (options: Types.Options) => {
 
     let protcolName = options.protocolName;
     let environment = options.env;

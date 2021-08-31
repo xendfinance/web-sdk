@@ -1,3 +1,4 @@
+import { Addresses } from '../../types';
 import createContract from "../create.contract";
 // import web3 from "web3";
 import privateKeyToAddress from "../../utils/privateKeyToAddress";

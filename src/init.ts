@@ -1,3 +1,4 @@
+import * as Types from './types';
 import getBalance from "./utils/balance";
 import { ChainId } from "./utils/constants";
 import { checkChainId } from "./utils/helpers";
@@ -12,21 +13,21 @@ import Group from "./strategies/group";
 import axios from "axios";
 
 
-const defaultInitOptions: Options = {
+const defaultInitOptions: Types.Options = {
   env: "testnet"
 }
 
 
 class XendFinance {
 
-  options: Options;
+  options: Types.Options;
   chainId: ChainId
   privateKey: string
   provider: string
 
   protocol: string
   availableProtocols: any[]
-  addresses: Addresses
+  addresses: Types.Addresses
   currency: string
   shareCurrency: string
 
@@ -38,7 +39,7 @@ class XendFinance {
   constructor(
     chainId: number,
     privateKey: string,
-    options: Options = defaultInitOptions
+    options: Types.Options = defaultInitOptions
   ) {
 
     this.options = options;
@@ -121,7 +122,7 @@ class XendFinance {
 }
 
 
-const initializeXendFinance = async (chainId: number, privateKey: string, options: Options) => {
+const initializeXendFinance = async (chainId: number, privateKey: string, options: Types.Options) => {
   //
   if (chainId === ChainId.BSC_MAINNET) {
     const protocols = await getMainnetProtocols(chainId);
@@ -135,3 +136,4 @@ const initializeXendFinance = async (chainId: number, privateKey: string, option
 
 
 export default initializeXendFinance;
+export { Types }

@@ -1,3 +1,4 @@
+import * as Types from '../types';
 import { ChainId } from "./constants";
 import { capitalizeFirstLetter, getAddressByName } from '../utils/helpers';
 import axios from "axios";
@@ -19,11 +20,11 @@ const bscMainnetAddresses = async (chainId: number) => {
 
 	const data = await getMainnetAddresses(chainId);
 
-	const protocols: Protocols[] = [];
+	const protocols: Types.Protocols[] = [];
 
 	if (data && Array.isArray(data)) {
 		for (const item of data) {
-			const protocol: Protocols = {
+			const protocol: Types.Protocols = {
 				name: capitalizeFirstLetter(item.protocol_name),
 				code: item.protocol_name,
 				addresses: {

@@ -1,3 +1,4 @@
+import { Addresses } from '../../types';
 import createGroup from './create.group';
 import getGroup from './get.group';
 import { getEsusuGroups as getGroups } from './groups';

@@ -1,3 +1,4 @@
+import { Addresses, Options, CooperativeCycleData } from '../../types';
 import createCooperative from './create.cooperative';
 import cooperativeInfo from './cooperative.info';
 import joinCooperative from './join.cooperative';

@@ -1,3 +1,4 @@
+import { Addresses, Options, EsusuCycleData } from '../../types';
 import createEsusu from './create';
 import createdCyclesCount, { interest } from "./created.cycles.count";
 import { createEsusuGroups, getEsusuGroups } from "../group/groups";

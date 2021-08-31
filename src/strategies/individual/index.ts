@@ -1,3 +1,4 @@
+import { Options, Addresses } from '../../types';
 import flexibleDeposit from './flexible-deposit';
 import fixedDeposit from './fixed-deposit';
 import fixedDepositInfo from './get-fixed-deposit-record'
